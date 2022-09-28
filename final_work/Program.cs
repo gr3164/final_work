@@ -4,3 +4,18 @@
 // [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
+
+Console.Write("Введите n(колличество строк в массиве): ");
+int n = Convert.ToInt32(Console.ReadLine());
+string[] array = new string[n];
+
+void FillArray(string[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"Введите строку {i+1}: ");
+        arr[i] = Console.ReadLine();
+    }
+}
+
+FillArray(array);
