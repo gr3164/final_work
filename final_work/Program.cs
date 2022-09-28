@@ -9,13 +9,19 @@ Console.Write("Введите n(колличество строк в масси�
 int n = Convert.ToInt32(Console.ReadLine());
 string[] array = new string[n];
 
+FillArray(array);
+PrintArray(array);
+
 void FillArray(string[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write($"Введите строку {i+1}: ");
+        Console.Write($"Введите строку {i + 1}: ");
         arr[i] = Console.ReadLine();
     }
 }
 
-FillArray(array);
+void PrintArray(string[] arr)
+{
+    Console.WriteLine(string.Join(", ", arr));
+}
