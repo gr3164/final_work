@@ -23,5 +23,16 @@ void FillArray(string[] arr)
 
 void PrintArray(string[] arr)
 {
-    Console.WriteLine(string.Join(", ", arr));
+    Console.Write(string.Join(", ", array));
+    Console.Write("=> [");
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3 && arr[i] != "")
+        {
+            Console.Write("\"{0}\",", arr[i]);
+        }
+    }
+    Console.Write("]");
+     Console.WriteLine();
 }
